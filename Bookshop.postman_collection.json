@@ -1,0 +1,1592 @@
+{
+	"info": {
+		"_postman_id": "ca1e0fe0-ad68-4579-bc08-5298c439e370",
+		"name": "Bookshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Add book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Pale Fire\",\n    \"numberOfPages\": 350,\n    \"price\": 25.7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Pale Fire\",\n    \"numberOfPages\": 350,\n    \"price\": 25.7\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:05:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"title\": \"Pale Fire\",\n    \"numberOfPages\": 350,\n    \"price\": 25.7,\n    \"dateOfPublishing\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Find books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:41:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"The Old Man and the Sea\",\n        \"numberOfPages\": 200,\n        \"price\": 30.5,\n        \"dateOfPublishing\": \"05.05.2002\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"The Great Gatsby\",\n        \"numberOfPages\": 255,\n        \"price\": 43.75,\n        \"dateOfPublishing\": \"10.12.1990\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"The Red and the Black\",\n        \"numberOfPages\": 370,\n        \"price\": 26.3,\n        \"dateOfPublishing\": \"25.09.1995\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"The Brothers Karamazov\",\n        \"numberOfPages\": 420,\n        \"price\": 53.2,\n        \"dateOfPublishing\": \"10.12.1990\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Pale Fire\",\n        \"numberOfPages\": 350,\n        \"price\": 25.7,\n        \"dateOfPublishing\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find books by title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books?title=the",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "the"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find books by title",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books?title=the",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "the"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:15:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"The Old Man and the Sea\",\n        \"numberOfPages\": 200,\n        \"price\": 30.5,\n        \"dateOfPublishing\": \"05.05.2002\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"The Great Gatsby\",\n        \"numberOfPages\": 255,\n        \"price\": 43.75,\n        \"dateOfPublishing\": \"10.12.1990\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"The Red and the Black\",\n        \"numberOfPages\": 370,\n        \"price\": 26.3,\n        \"dateOfPublishing\": \"25.09.1995\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"The Brothers Karamazov\",\n        \"numberOfPages\": 420,\n        \"price\": 53.2,\n        \"dateOfPublishing\": \"10.12.1990\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find books by price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books?price-less-than-or-equal=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "price-less-than-or-equal",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find books by price",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books?price-less-than-or-equal=35",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "price-less-than-or-equal",
+											"value": "35"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:19:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"The Old Man and the Sea\",\n        \"numberOfPages\": 200,\n        \"price\": 30.5,\n        \"dateOfPublishing\": \"05.05.2002\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"The Red and the Black\",\n        \"numberOfPages\": 370,\n        \"price\": 26.3,\n        \"dateOfPublishing\": \"25.09.1995\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Pale Fire\",\n        \"numberOfPages\": 350,\n        \"price\": 25.7,\n        \"dateOfPublishing\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find books by title and price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books?title=the&price-less-than-or-equal=35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "the"
+								},
+								{
+									"key": "price-less-than-or-equal",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find books by title and price",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books?title=the&price-less-than-or-equal=35",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "the"
+										},
+										{
+											"key": "price-less-than-or-equal",
+											"value": "35"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:21:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"The Old Man and the Sea\",\n        \"numberOfPages\": 200,\n        \"price\": 30.5,\n        \"dateOfPublishing\": \"05.05.2002\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"The Red and the Black\",\n        \"numberOfPages\": 370,\n        \"price\": 26.3,\n        \"dateOfPublishing\": \"25.09.1995\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find books by date of publishing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books?date-of-publishing-before=26.09.1995",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "date-of-publishing-before",
+									"value": "26.09.1995"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find books by date of publishing",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books?date-of-publishing-before=26.09.1995",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "date-of-publishing-before",
+											"value": "26.09.1995"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:24:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"The Great Gatsby\",\n        \"numberOfPages\": 255,\n        \"price\": 43.75,\n        \"dateOfPublishing\": \"10.12.1990\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"The Red and the Black\",\n        \"numberOfPages\": 370,\n        \"price\": 26.3,\n        \"dateOfPublishing\": \"25.09.1995\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"The Brothers Karamazov\",\n        \"numberOfPages\": 420,\n        \"price\": 53.2,\n        \"dateOfPublishing\": \"10.12.1990\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find books by even number of pages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books/even-number-of-pages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"even-number-of-pages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find books by even number of pages",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books/even-number-of-pages",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"even-number-of-pages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:30:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"The Old Man and the Sea\",\n        \"numberOfPages\": 200,\n        \"price\": 30.5,\n        \"dateOfPublishing\": \"05.05.2002\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"The Red and the Black\",\n        \"numberOfPages\": 370,\n        \"price\": 26.3,\n        \"dateOfPublishing\": \"25.09.1995\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"The Brothers Karamazov\",\n        \"numberOfPages\": 420,\n        \"price\": 53.2,\n        \"dateOfPublishing\": \"10.12.1990\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Pale Fire\",\n        \"numberOfPages\": 350,\n        \"price\": 25.7,\n        \"dateOfPublishing\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find books by date of publishing paginated and sorted",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books?date-of-publishing=10.12.1990&page=1&size=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "date-of-publishing",
+									"value": "10.12.1990"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find books by date of publishing paginated and sorted",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books?date-of-publishing=10.12.1990&page=1&size=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "date-of-publishing",
+											"value": "10.12.1990"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 21:53:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"The Great Gatsby\",\n        \"numberOfPages\": 255,\n        \"price\": 43.75,\n        \"dateOfPublishing\": \"10.12.1990\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find book by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find book by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:32:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"The Old Man and the Sea\",\n    \"numberOfPages\": 200,\n    \"price\": 30.5,\n    \"dateOfPublishing\": \"05.05.2002\"\n}"
+						},
+						{
+							"name": "Book not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"6"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:33:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Pale Fire 2\",\n    \"numberOfPages\": 300,\n    \"price\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/books/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update book",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Pale Fire 2\",\n    \"numberOfPages\": 300,\n    \"price\": 20\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:40:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"title\": \"Pale Fire 2\",\n    \"numberOfPages\": 300,\n    \"price\": 20,\n    \"dateOfPublishing\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update book date of publishing",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dateOfPublishing\": \"10.12.1990\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/books/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update book date of publishing",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"dateOfPublishing\": \"10.12.1990\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/books/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 16:42:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"title\": \"Pale Fire 2\",\n    \"numberOfPages\": 300,\n    \"price\": 20,\n    \"dateOfPublishing\": \"10.12.1990\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove book by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove book by ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 21:55:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "The book: 5 has been deleted successfully."
+						},
+						{
+							"name": "Book not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"5"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 21:55:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Remove books with odd number of pages",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/books/odd-number-of-pages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"odd-number-of-pages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove books with odd number of pages",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/books/odd-number-of-pages",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"odd-number-of-pages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 21:56:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1 books have been deleted successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "Add author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Frank Herbert\",\n    \"birthday\": \"08.10.1920\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add author",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Frank Herbert\",\n    \"birthday\": \"08.10.1920\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 22:03:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"Frank Herbert\",\n    \"birthplace\": null,\n    \"birthday\": \"08.10.1920\",\n    \"books\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Find authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find authors",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/authors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 22:04:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Stendhal\",\n        \"birthplace\": \"Grenoble\",\n        \"birthday\": \"23.01.1983\",\n        \"books\": [\n            {\n                \"id\": 2,\n                \"title\": \"The Great Gatsby\",\n                \"numberOfPages\": 255,\n                \"price\": 43.75,\n                \"dateOfPublishing\": \"10.12.1990\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"The Red and the Black\",\n                \"numberOfPages\": 370,\n                \"price\": 26.3,\n                \"dateOfPublishing\": \"25.09.1995\"\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Ernest Hemingway\",\n        \"birthplace\": \"Idaho\",\n        \"birthday\": \"21.07.1999\",\n        \"books\": [\n            {\n                \"id\": 1,\n                \"title\": \"The Old Man and the Sea\",\n                \"numberOfPages\": 200,\n                \"price\": 30.5,\n                \"dateOfPublishing\": \"05.05.2002\"\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Fyodor Dostoevsky\",\n        \"birthplace\": \"Moscow\",\n        \"birthday\": \"01.11.1821\",\n        \"books\": [\n            {\n                \"id\": 4,\n                \"title\": \"The Brothers Karamazov\",\n                \"numberOfPages\": 420,\n                \"price\": 53.2,\n                \"dateOfPublishing\": \"10.12.1990\"\n            }\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Frank Herbert\",\n        \"birthplace\": null,\n        \"birthday\": \"08.10.1920\",\n        \"books\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find author by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/authors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find author by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/authors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 22:04:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Stendhal\",\n    \"birthplace\": \"Grenoble\",\n    \"birthday\": \"23.01.1983\",\n    \"books\": [\n        {\n            \"id\": 2,\n            \"title\": \"The Great Gatsby\",\n            \"numberOfPages\": 255,\n            \"price\": 43.75,\n            \"dateOfPublishing\": \"10.12.1990\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"The Red and the Black\",\n            \"numberOfPages\": 370,\n            \"price\": 26.3,\n            \"dateOfPublishing\": \"25.09.1995\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Frank Herbert Senior\",\n    \"birthday\": \"08.10.1930\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authors/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update author",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Frank Herbert Senior\",\n    \"birthday\": \"08.10.1930\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/authors/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authors",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 22:07:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"Frank Herbert Senior\",\n    \"birthplace\": null,\n    \"birthday\": \"08.10.1930\",\n    \"books\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update author name",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Frank Herbert\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authors/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update author name",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Frank Herbert\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/authors/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authors",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 22:09:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"Frank Herbert\",\n    \"birthplace\": null,\n    \"birthday\": \"08.10.1930\",\n    \"books\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/authors/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove author",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/authors/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authors",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 22:10:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "4"
+						},
+						{
+							"name": "Author not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/authors/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"authors",
+										"4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jun 2022 22:10:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
