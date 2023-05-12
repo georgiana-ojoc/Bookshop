@@ -1,4 +1,4 @@
-package boo.springbootdata.bookshop.configuration;
+package com.springbootdata.bookshop.configuration;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

@@ -1,6 +1,6 @@
-package boo.springbootdata.bookshop.repository;
+package com.springbootdata.bookshop.repository;
 
-import boo.springbootdata.bookshop.model.domain.Author;
+import com.springbootdata.bookshop.model.domain.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

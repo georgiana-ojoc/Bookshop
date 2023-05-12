@@ -1,9 +1,9 @@
-package boo.springbootdata.bookshop.service;
+package com.springbootdata.bookshop.service;
 
-import boo.springbootdata.bookshop.model.domain.Book;
-import boo.springbootdata.bookshop.model.dto.BookDTO;
-import boo.springbootdata.bookshop.repository.BookRepository;
-import boo.springbootdata.bookshop.repository.specification.BookSpecifications;
+import com.springbootdata.bookshop.model.domain.Book;
+import com.springbootdata.bookshop.model.dto.BookDTO;
+import com.springbootdata.bookshop.repository.BookRepository;
+import com.springbootdata.bookshop.repository.specification.BookSpecifications;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.PageRequest;

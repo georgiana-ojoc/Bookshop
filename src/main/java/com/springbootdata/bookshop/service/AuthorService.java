@@ -1,8 +1,8 @@
-package boo.springbootdata.bookshop.service;
+package com.springbootdata.bookshop.service;
 
-import boo.springbootdata.bookshop.model.domain.Author;
-import boo.springbootdata.bookshop.model.dto.AuthorDTO;
-import boo.springbootdata.bookshop.repository.AuthorRepository;
+import com.springbootdata.bookshop.model.domain.Author;
+import com.springbootdata.bookshop.model.dto.AuthorDTO;
+import com.springbootdata.bookshop.repository.AuthorRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

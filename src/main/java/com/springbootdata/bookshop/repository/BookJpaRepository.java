@@ -1,6 +1,6 @@
-package boo.springbootdata.bookshop.repository;
+package com.springbootdata.bookshop.repository;
 
-import boo.springbootdata.bookshop.model.domain.Book;
+import com.springbootdata.bookshop.model.domain.Book;
 
 import java.math.BigDecimal;
 

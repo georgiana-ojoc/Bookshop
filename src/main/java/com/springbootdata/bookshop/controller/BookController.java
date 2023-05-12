@@ -1,8 +1,8 @@
-package boo.springbootdata.bookshop.controller;
+package com.springbootdata.bookshop.controller;
 
-import boo.springbootdata.bookshop.model.domain.Book;
-import boo.springbootdata.bookshop.model.dto.BookDTO;
-import boo.springbootdata.bookshop.service.BookService;
+import com.springbootdata.bookshop.model.domain.Book;
+import com.springbootdata.bookshop.model.dto.BookDTO;
+import com.springbootdata.bookshop.service.BookService;
 import lombok.AllArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;

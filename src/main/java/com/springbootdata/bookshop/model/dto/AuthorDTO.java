@@ -1,4 +1,4 @@
-package boo.springbootdata.bookshop.model.dto;
+package com.springbootdata.bookshop.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;

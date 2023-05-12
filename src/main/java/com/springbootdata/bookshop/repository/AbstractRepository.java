@@ -1,6 +1,6 @@
-package boo.springbootdata.bookshop.repository;
+package com.springbootdata.bookshop.repository;
 
-import boo.springbootdata.bookshop.utility.EntityManagerSingleton;
+import com.springbootdata.bookshop.utility.EntityManagerSingleton;
 
 import javax.persistence.EntityManager;
 

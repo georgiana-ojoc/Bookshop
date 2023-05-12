@@ -1,7 +1,7 @@
-package boo.springbootdata.bookshop;
+package com.springbootdata.bookshop;
 
-import boo.springbootdata.bookshop.model.domain.Book;
-import boo.springbootdata.bookshop.repository.BookJpaRepository;
+import com.springbootdata.bookshop.model.domain.Book;
+import com.springbootdata.bookshop.repository.BookJpaRepository;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

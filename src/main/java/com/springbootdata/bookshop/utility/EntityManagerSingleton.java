@@ -1,4 +1,4 @@
-package boo.springbootdata.bookshop.utility;
+package com.springbootdata.bookshop.utility;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

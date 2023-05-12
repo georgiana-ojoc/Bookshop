@@ -1,4 +1,4 @@
-package boo.springbootdata.bookshop;
+package com.springbootdata.bookshop;
 
 import java.math.BigDecimal;
 import java.sql.Connection;

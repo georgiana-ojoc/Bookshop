@@ -1,8 +1,8 @@
-package boo.springbootdata.bookshop.controller;
+package com.springbootdata.bookshop.controller;
 
-import boo.springbootdata.bookshop.model.domain.Author;
-import boo.springbootdata.bookshop.model.dto.AuthorDTO;
-import boo.springbootdata.bookshop.service.AuthorService;
+import com.springbootdata.bookshop.model.domain.Author;
+import com.springbootdata.bookshop.model.dto.AuthorDTO;
+import com.springbootdata.bookshop.service.AuthorService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

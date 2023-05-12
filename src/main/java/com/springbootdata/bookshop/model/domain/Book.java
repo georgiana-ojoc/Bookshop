@@ -1,6 +1,7 @@
-package boo.springbootdata.bookshop.model.domain;
+package com.springbootdata.bookshop.model.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,13 +14,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
-import java.util.Set;
 
-import static javax.persistence.CascadeType.ALL;
-import static javax.persistence.FetchType.EAGER;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Builder
@@ -28,23 +27,28 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Getter
 @Setter
 @ToString
-@Entity(name = "authors")
-public class Author {
+@Entity(name = "books")
+public class Book {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 32)
-    private String name;
+    @Column(unique = true, nullable = false, length = 64)
+    private String title;
 
-    @Column(length = 64)
-    private String birthplace;
+    @Column(name = "number_of_pages")
+    private Integer numberOfPages;
 
+    private BigDecimal price;
+
+    @Column(name = "date_of_publishing")
     @JsonFormat(pattern = "dd.MM.yyyy")
-    private LocalDate birthday;
+    private LocalDate dateOfPublishing;
 
-    @OneToMany(mappedBy = "author", fetch = EAGER, cascade = ALL)
-    private Set<Book> books;
+    @ManyToOne
+    @JsonIgnore
+    @ToString.Exclude
+    private Author author;
 
     @Override
     public boolean equals(Object object) {
@@ -54,8 +58,8 @@ public class Author {
         if (object == null || Hibernate.getClass(this) != Hibernate.getClass(object)) {
             return false;
         }
-        Author author = (Author) object;
-        return id != null && Objects.equals(id, author.id);
+        Book book = (Book) object;
+        return id != null && Objects.equals(id, book.id);
     }
 
     @Override
@@ -63,4 +67,3 @@ public class Author {
         return getClass().hashCode();
     }
 }
-
